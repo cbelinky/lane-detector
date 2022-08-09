@@ -101,8 +101,9 @@ while (cap.isOpened()):
     canny = do_canny(frame)
     
     # First, visualize the frame to figure out the three coordinates defining the triangular mask
-    plt.imshow(frame)
-    plt.show()
+    cv.imshow("canny", canny)
+    #plt.imshow(frame)
+    #plt.show()
     segment = do_segment(canny)
     
      # cv.HoughLinesP(frame, distance resolution of accumulator in pixels (larger = less precision), angle resolution of accumulator in radians (larger = less precision), threshold of minimum number of intersections, empty placeholder array, minimum length of line in pixels, maximum distance in pixels between disconnected lines)
